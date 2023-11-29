@@ -23,7 +23,7 @@ export default function Home() {
             <div className="w-1/2 md:w-full">
               <Image
                 src={ProfilePic}
-                alt="CodeBucks"
+                alt="Lucas Oliveira Véras"
                 className="w-full h-full lg:hidden md:inline-block md:w-full"
                 priority={true}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"

@@ -165,7 +165,7 @@ const NavBar = () => {
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 bg-light rounded-full dark:bg-dark"
+              className="w-6 bg-light rounded-full dark:bg-dark flex justify-center items-center"
             >
               <GithubIcon />
             </motion.a>

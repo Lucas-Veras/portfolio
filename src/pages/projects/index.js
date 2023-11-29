@@ -40,7 +40,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-sm">
+          <h2 className="my-2 w-full text-left text-4xl font-bold lg:text-3xl xs:text-2xl">
             {title}
           </h2>
         </Link>
@@ -124,7 +124,7 @@ const Projects = () => {
         <Layout className="pt-16">
           <AnimatedText
             text="Imagination trumps Knowledge"
-            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:text-4xl"
+            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-5xl xs:!text-4xl"
           />
 
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">

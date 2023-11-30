@@ -3,7 +3,7 @@ import TransitionEffect from "@/components/TransitionEffect";
 import Layout from "@/pages/layout";
 import Head from "next/head";
 import avasusImg from "public/images/projects/avasus.png";
-import FeaturedProject from "./components/FeaturedProject";
+import FeaturedProject from "../../components/FeaturedProject";
 
 const Projects = () => {
   return (

@@ -3,11 +3,17 @@ import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import TransitionEffect from "@/components/TransitionEffect";
+import useAnimateNumbers from "@/hooks/useAnimateNumbers";
 import Layout from "@/pages/layout";
 import Head from "next/head";
 import Image from "next/image";
 import profilePic from "public/images/profile/fotoDePerfil.jpg";
-import AnimatedNumbers from "./components/AnimatedNumbers";
+
+const AnimatedNumbers = ({ value }) => {
+  const { ref } = useAnimateNumbers({ value });
+
+  return <span ref={ref}></span>;
+};
 
 const About = () => {
   return (

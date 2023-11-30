@@ -1,7 +1,7 @@
-import { GithubIcon } from "@/components/Icons";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { GithubIcon } from "./Icons";
 
 const FramerImage = motion(Image);
 

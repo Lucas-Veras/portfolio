@@ -7,6 +7,7 @@ import {
 } from "@/constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const FramerImage = motion(Image);
 
@@ -14,25 +15,26 @@ const AnimatedSkills = ({ skills = [], animationDelay = 0.2 }) => {
   return (
     <div className="flex flex-row md:grid md:grid-cols-5 md:justify-items-center justify-around flex-wrap mt-4 gap-8 md:gap-4 items-center">
       {skills.map((skill, index) => (
-        <FramerImage
-          key={skill.skillName}
-          title={skill.skillName}
-          src={skill.Image}
-          width={80}
-          height={80}
-          alt={skill.skillName}
-          className="cursor-pointer w-20 xl:w-16 lg:w-12 md:w-full h-20 xl:h-16 lg:h-12 md:h-full md:max-h-[48px] object-contain"
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            transition: {
-              delay: index * animationDelay,
-            },
-          }}
-          whileHover={{ y: -5 }}
-          priority
-          viewport={{ once: true }}
-        />
+        <Link key={skill.skillName} href={skill.link} target="_blank">
+          <FramerImage
+            title={skill.skillName}
+            src={skill.Image}
+            width={80}
+            height={80}
+            alt={skill.skillName}
+            className="cursor-pointer w-20 xl:w-16 lg:w-12 md:w-full h-20 xl:h-16 lg:h-12 md:h-full md:max-h-[48px] object-contain"
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                delay: index * animationDelay,
+              },
+            }}
+            whileHover={{ y: -5 }}
+            priority
+            viewport={{ once: true }}
+          />
+        </Link>
       ))}
     </div>
   );

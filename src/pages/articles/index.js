@@ -1,4 +1,4 @@
-import AnimatedText from "@/components/AnimatedText";
+import AnimatedText from "@/components/global/AnimatedText";
 import Layout from "@/pages/layout";
 import Head from "next/head";
 import React /*, { useRef }*/ from "react";
@@ -8,7 +8,7 @@ import React /*, { useRef }*/ from "react";
 // import article2 from "../../public/images/articles/create loading screen in react js.jpg";
 // import { motion, useMotionValue } from "framer-motion";
 // import article3 from "../../public/images/articles/create modal component in react using react portals.png";
-import TransitionEffect from "@/components/TransitionEffect";
+import TransitionEffect from "@/components/global/TransitionEffect";
 
 // const FramerImage = motion(Image);
 

@@ -1,45 +1,69 @@
-import React from "react";
+import {
+  backendSkills,
+  frontendSkills,
+  fullStack,
+  otherSkill,
+  skillData,
+} from "@/constants";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
-const Skill = ({ name, x, y }) => {
+const FramerImage = motion(Image);
+
+const AnimatedSkills = ({ skills = [], animationDelay = 0.2 }) => {
   return (
-    <motion.div
-      className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark cursor-pointer absolute dark:text-dark dark:bg-light lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3 xs:bg-transparent xs:dark:bg-transparent xs:text-dark xs:dark:text-light cs:font-bold"
-      whileHover={{ scale: 1.05 }}
-      initial={{ x: 0, y: 0 }}
-      whileInView={{ x, y, transition: { duration: 1.5 } }}
-      viewport={{ once: true }}
-    >
-      {name}
-    </motion.div>
+    <div className="flex flex-row md:grid md:grid-cols-5 md:justify-items-center justify-around flex-wrap mt-4 gap-8 md:gap-4 items-center">
+      {skills.map((skill, index) => (
+        <FramerImage
+          key={skill.skillName}
+          title={skill.skillName}
+          src={skill.Image}
+          width={80}
+          height={80}
+          alt={skill.skillName}
+          className="cursor-pointer w-20 xl:w-16 lg:w-12 md:w-full h-20 xl:h-16 lg:h-12 md:h-full md:max-h-[48px] object-contain"
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: {
+              delay: index * animationDelay,
+            },
+          }}
+          whileHover={{ y: -5 }}
+          priority
+          viewport={{ once: true }}
+        />
+      ))}
+    </div>
   );
 };
 
 const Skills = () => {
   return (
-    <>
-      <h2 className="font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32">
+    <section className="my-64">
+      <h2 className="font-bold text-8xl mt-64 mb-32 w-full text-center md:text-6xl md:mt-32 md:mb-16">
         Skills
       </h2>
-      <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark lg:h-[80vh] sm:h-[60vh] xs:h-[50vh] lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd sm:bg-circularLightSm sm:dark:bg-circularDarkSm">
-        <motion.div
-          className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-8 shadow-dark cursor-pointer dark:text-dark dark:bg-light lg:p-6 md:p-4 xs:text-xs xs:p-2"
-          whileHover={{ scale: 1.05 }}
-        >
-          Web
-        </motion.div>
-        <Skill name="HTML" x="-25vw" y="2vw" />
-        <Skill name="CSS" x="-5vw" y="-10vw" />
-        <Skill name="Javascript" x="20vw" y="6vw" />
-        <Skill name="React" x="0vw" y="12vw" />
-        <Skill name="Next" x="-20vw" y="-15vw" />
-        <Skill name="Node" x="15vw" y="-12vw" />
-        <Skill name="Typescript" x="32vw" y="-5vw" />
-        <Skill name="Figma" x="0vw" y="-20vw" />
-        <Skill name="Chackra-ui" x="-25vw" y="18vw" />
-        <Skill name="Tailwind CSS" x="18vw" y="18vw" />
+      <div className="flex flex-col items-center justify-center gap-3 h-full overflow-hidden md:hidden">
+        <AnimatedSkills skills={skillData} />
+        <AnimatedSkills skills={frontendSkills} />
+        <AnimatedSkills skills={backendSkills} />
+        <AnimatedSkills skills={fullStack} />
+        <AnimatedSkills skills={otherSkill} />
       </div>
-    </>
+      <div className="hidden md:block mx-auto">
+        <AnimatedSkills
+          animationDelay={0.1}
+          skills={[
+            ...skillData,
+            ...frontendSkills,
+            ...backendSkills,
+            ...fullStack,
+            ...otherSkill,
+          ]}
+        />
+      </div>
+    </section>
   );
 };
 

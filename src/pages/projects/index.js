@@ -1,5 +1,5 @@
-import AnimatedText from "@/components/AnimatedText";
-import TransitionEffect from "@/components/TransitionEffect";
+import AnimatedText from "@/components/global/AnimatedText";
+import TransitionEffect from "@/components/global/TransitionEffect";
 import Layout from "@/pages/layout";
 import Head from "next/head";
 import avasusImg from "public/images/projects/avasus.png";

@@ -3,11 +3,11 @@ import Head from "next/head";
 import Image from "next/image";
 import ProfilePic from "public/images/profile/developer-pic-1.png";
 import LightBulb from "public/images/svgs/miscellaneous_icons_1.svg";
-import AnimatedText from "@/components/AnimatedText";
+import AnimatedText from "@/components/global/AnimatedText";
 import Link from "next/link";
-import { LinkArrow } from "@/components/Icons";
+import { LinkArrow } from "@/components/global/Icons";
 import HireMe from "@/components/HireMe";
-import TransitionEffect from "@/components/TransitionEffect";
+import TransitionEffect from "@/components/global/TransitionEffect";
 
 export default function Home() {
   return (
@@ -36,9 +36,8 @@ export default function Home() {
               />
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
                 Como um desenvolvedor full-stack, me dedico a transformar ideias
-                em aplicações inovadoras. Explore meus projetos mais
-                recentes, mostrando minha experiência em desenvolvimento web e
-                mobile.
+                em aplicações inovadoras. Explore meus projetos mais recentes,
+                mostrando minha experiência em desenvolvimento web e mobile.
               </p>
 
               <div className="flex items-center self-start mt-2 lg:self-center">

@@ -1,40 +1,13 @@
 import AnimatedText from "@/components/AnimatedText";
+import Education from "@/components/Education";
+import Experience from "@/components/Experience";
+import Skills from "@/components/Skills";
+import TransitionEffect from "@/components/TransitionEffect";
 import Layout from "@/pages/layout";
 import Head from "next/head";
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
 import profilePic from "public/images/profile/fotoDePerfil.jpg";
-import { useInView, useMotionValue, useSpring } from "framer-motion";
-import Skills from "@/components/Skills";
-import Experience from "@/components/Experience";
-import Education from "@/components/Education";
-import TransitionEffect from "@/components/TransitionEffect";
-
-const AnimatedNumbers = ({ value }) => {
-  const ref = useRef(null);
-
-  const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, {
-    duration: 3000,
-  });
-  const isInView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    if (isInView) {
-      motionValue.set(value);
-    }
-  }, [isInView, value, motionValue]);
-
-  useEffect(() => {
-    springValue.on("change", (latestValue) => {
-      if (ref.current && latestValue.toFixed(0) <= value) {
-        ref.current.textContent = latestValue.toFixed(0);
-      }
-    });
-  }, [springValue, value]);
-
-  return <span ref={ref}></span>;
-};
+import AnimatedNumbers from "./components/AnimatedNumbers";
 
 const About = () => {
   return (

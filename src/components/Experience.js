@@ -2,7 +2,15 @@ import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import LiIcon from "./LiIcon";
 
-const Details = ({ position, company, companyLink, time, address, work }) => {
+const Details = ({
+  position,
+  company,
+  companyLink,
+  time,
+  address,
+  work,
+  title,
+}) => {
   const ref = useRef(null);
   return (
     <li
@@ -18,6 +26,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
           {position}&nbsp;
           <a
+            title={title}
             href={companyLink}
             target="_blank"
             className="text-primary dark:text-primaryDark capitalize"
@@ -55,18 +64,54 @@ const Experience = () => {
 
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
+            title={"Strategi Consultoria"}
+            position={"Desenvolvedor Fullstack"}
+            companyLink={
+              "https://www.linkedin.com/company/strategi-consultoria/"
+            }
+            company={"Strategi Consultoria"}
+            time={"02/2024 - Até o momento"}
+            address={"Natal, RN | Presencial"}
+            work={
+              <>
+                <span className="block">
+                  - Atuou em um projeto de automação para extração de Notas
+                  Fiscais e arquivos XML dos portais Directa e UVT. (Next/Flask)
+                </span>
+                <span className="block">
+                  - Trabalhou na manutenção de sistemas desenvolvidos em Flask e
+                  Django.
+                </span>
+                <span className="block">
+                  - Participou de um projeto de automação para a geração e
+                  abertura de processos de alvarás de funcionamento. (Next/Django)
+                </span>
+                <span className="block">
+                  - Desenvolvimento de pipelines de integração contínua
+                </span>
+                <span className="block">
+                  - Utilizou as seguintes tecnologias: Next, Django, Flask,
+                  TypeScript, Python, PostgresSQL, SQL Server, Ant Design,
+                  Styled-Components, CI/CD
+                </span>
+              </>
+            }
+          />
+
+          <Details
+            title={"OrçaCasaFácil"}
             position={"Desenvolvedor Front-end (Freelancer)"}
-            companyLink={"https://app.orcacasafacil.com.br/"}
+            companyLink={"https://app.orcacasafacil.com.br/login"}
             company={"OrçaCasaFácil"}
-            time={"09/2023 - Até o momento"}
+            time={"09/2023 - 01/2024"}
             address={"Natal, RN | Remoto"}
             work={
               <>
                 <span className="block">
-                  - Participou da implementação e construção de design da
-                  plataforma OrçaCasaFácil, feita para criação de orçamentos de
-                  contrução em geral mas com foco no programa Minha Casa, Minha
-                  Vida
+                  - Participou da implementação externa e interna e construção
+                  de design da plataforma OrçaCasaFácil, feita para criação de
+                  orçamentos de contrução em geral mas com foco no programa
+                  Minha Casa, Minha Vida
                 </span>
                 <span className="block">
                   - Utilizou as seguintes tecnologias: React, javascript,
@@ -77,6 +122,7 @@ const Experience = () => {
           />
 
           <Details
+            title={"Extraconomy"}
             position={"Desenvolvedor Front-end (Freelancer)"}
             companyLink={"https://extraconomy.com/"}
             company={"Extraconomy"}
@@ -97,6 +143,9 @@ const Experience = () => {
           />
 
           <Details
+            title={
+              "Secretaria de Estado do Trabalho, da Habitação e da Assistência Social (SETHAS)"
+            }
             position={"Desenvolvedor Mobile e Web Front-End (Estágio)"}
             companyLink={
               "https://www.linkedin.com/company/governo-do-estado-do-rio-grande-do-norte/mycompany/"

@@ -36,9 +36,9 @@ const About = () => {
               </h2>
 
               <p className="font-medium">
-                Olá, meu nome é <strong>Lucas Oliveira Véras</strong>, tenho 20
-                anos e sou desenvolvedor web e mobile, acumulando mais de 7
-                meses de experiência na área. Tenho um profundo comprometimento
+                Olá, meu nome é <strong>Lucas Oliveira Véras</strong>, tenho 21
+                anos e sou desenvolvedor web e mobile, acumulando mais de 1
+                ano de experiência na área. Tenho um profundo comprometimento
                 em transformar as ideias dos meus clientes em realidade, sempre
                 buscando maneiras inovadoras de criar experiências digitais
                 incríveis.
@@ -73,7 +73,7 @@ const About = () => {
             <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value={3} />+
+                  <AnimatedNumbers value={4} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light xl:text-center md:text-lg sm:text-base xs:text-sm">
                   clientes satisfeitos
@@ -82,7 +82,7 @@ const About = () => {
 
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value={3} />+
+                  <AnimatedNumbers value={4} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light xl:text-center md:text-lg sm:text-base xs:text-sm">
                   projetos completos
@@ -91,10 +91,10 @@ const About = () => {
 
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value={7} />+
+                  <AnimatedNumbers value={1} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  meses de experiência
+                  ano de experiência
                 </h2>
               </div>
             </div>

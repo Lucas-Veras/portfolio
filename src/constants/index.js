@@ -116,14 +116,14 @@ export const backendSkills = [
 
 export const fullStack = [
   {
-    skillName: "HTML",
-    Image: "/images/skills/html.svg",
-    link: "https://developer.mozilla.org/pt-BR/docs/Web/HTML",
+    skillName: "Python",
+    Image: "/images/skills/python.png",
+    link: "https://www.python.org/",
   },
   {
-    skillName: "CSS",
-    Image: "/images/skills/css.svg",
-    link: "https://developer.mozilla.org/pt-BR/docs/Web/CSS",
+    skillName: "Django Rest Framework",
+    Image: "/images/skills/drf.png",
+    link: "https://www.django-rest-framework.org/",
   },
   {
     skillName: "JavaScript",

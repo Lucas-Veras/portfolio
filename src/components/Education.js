@@ -48,6 +48,7 @@ const Education = () => {
 
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
+            tit
             type={"Tecnologia em Análise e Desenvolvimento de Sistemas (TADS)"}
             time={"06/2021 - Até o momento"}
             place={
